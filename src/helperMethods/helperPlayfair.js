@@ -1,4 +1,4 @@
-/************CREATION TABLE FUNCTIONS*************/ 
+/************TABLE CREATION FUNCTIONS*************/ 
 
 /**
  * @param {String} 
@@ -14,7 +14,7 @@ function removeDuplicates(str) {
 /** 
  * @param {String} 
  * @returns {Array}
- * @description creates an array with the alphabet excluding Q
+ * @description creates an array with the alphabet excluding Q in order starting with word then rest of alphabet
  * */ 
 
 function createAlphaBet(str) {
@@ -42,4 +42,22 @@ function createTable(str) {
   return matrix
 }
 
+/************PAIR CREATION FUNCTION*************/ 
+/** 
+ * @param {String} 
+ * @returns {Array}
+ * @description In a playfair cipher the message is split into digraphs, pairs of two letters. If there is an odd number of letters, a Z is added to the last letter. removes spaces and uppercase
+ * */ 
+
+ function pairs(str) {
+    let clearnStr = str.replace(/\s/g, '').toUpperCase()
+    let checkStr = clearnStr.length % 2 === 0 ? clearnStr: `${clearnStr}Z`
+    let pairsArr = []
+    for (let i = 0; i < checkStr.length; i++) {
+      if(i % 2 !== 0) {
+        pairsArr.push(checkStr.slice(i-1,i+1))
+      }
+    }
+    return pairsArr
+ }
 
