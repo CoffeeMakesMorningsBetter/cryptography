@@ -43,6 +43,7 @@ function createTable(str) {
 }
 
 /************PAIR CREATION FUNCTION*************/ 
+
 /** 
  * @param {String} 
  * @returns {Array}
@@ -61,3 +62,19 @@ function createTable(str) {
     return pairsArr
  }
 
+ /************CHECKING FUNCTIONS*************/ 
+
+// NOT ON SAME ROW OR COLUMN FUNCTION
+// CREATE AND RETURN SUBMATRIX 
+
+// COLUMN FUCTION
+  // RETURN ARRAY?
+  // USE RECURSION OR NOT? WHATS MY BASE CASE?
+  // WHERE DO I START?
+
+// ROW FUNCTION
+  // RETURN ARRAY?
+  // WHATS MY BASE CASE? USE RECURSION OR NOT?
+  // WHERE DO I START?
+
+  // get coordinates of both first ie: find them
