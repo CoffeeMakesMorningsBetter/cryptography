@@ -1,0 +1,31 @@
+.grid-item-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  vertical-align: baseline;
+  margin-top: 1rem;
+}
+
+.grid-item-parent:last-child {
+  border-right: 1px black solid;
+}
+
+.grid-item-top,
+.grid-item-bottom {
+  align-items: center;
+  border-bottom: 1px black solid;
+  border-left: 1px black solid;
+  width: 25px;
+  height: 25px; 
+  padding: 5px;
+}
+
+.grid-item-top {
+  border-top: 1px black solid;
+}
+
+.current {
+  background: turquoise;
+  font-weight: 800;
+}

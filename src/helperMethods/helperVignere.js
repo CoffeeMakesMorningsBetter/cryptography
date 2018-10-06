@@ -10,7 +10,7 @@ function mapWordsToIndex(word) {
   let position = []
   for (let i = 0; i < word.length; i++) {
     let value = (90 + word.charCodeAt(i) + 1) % 26
-    position.push({letter: word[i], value}) 
+    position.push({letter: word[i], idxValue: value}) 
   }
   return position
 }

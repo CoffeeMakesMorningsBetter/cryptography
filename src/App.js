@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import VignereCipher from './components/vignereCipher/vignereCipher';
+import VignereCipher from './components/vignereCipher/VignereCipher';
 
 class App extends Component {
   render() {

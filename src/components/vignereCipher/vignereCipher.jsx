@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import InputForm from './inputForm'
+import InputForm from './InputForm'
+import WordMapGrid from './WordMapGrid'
 import { mapWordsToIndex, createAlphabet } from '../../helperMethods/helperVignere';
 
 const init = createAlphabet();
@@ -49,9 +50,11 @@ class VignereCipher extends Component {
   };
 
   render() {
+    const { wordMapValues, position} = this.state
     return(
       <div>
         <InputForm addWord={this.addWord}/>
+        {wordMapValues.length > 0 && <WordMapGrid position={position} wordMapGrid={wordMapValues}/>}
       </div>
     )
   }
