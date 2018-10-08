@@ -1,0 +1,12 @@
+.cipher-display-parent {
+  display: flex;
+  flex-direction: column;
+}
+
+.cipher-display-child {
+  width: 100vw;
+  height: 1.5rem;
+  border: 1px solid black;
+  vertical-align: middle;
+  padding: 5px;
+}
