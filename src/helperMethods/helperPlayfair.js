@@ -82,3 +82,7 @@ function findValue(arr, value) {
     }
   }
 }
+
+function checkType() {
+  
+}

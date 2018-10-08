@@ -1,0 +1,20 @@
+.cipher-grid-item {
+  display: flex; 
+  flex-direction: column;
+  text-align: center;
+}
+
+.cipher-grid-item:last-child {
+  border-right: 1px solid black;
+}
+
+.cipher-grid-item-top,
+.cipher-grid-item-bottom {
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.cipher-grid-item-top {
+  border-top: 1px solid black;
+}
+
