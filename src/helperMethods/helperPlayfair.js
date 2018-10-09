@@ -69,7 +69,8 @@ function mapIndexPairs(matrix, pairs) {
   for(let i = 0; i < pairs.length; i++) {
     let coordinatesOne = findValue(matrix, pairs[i][0])
     let coordinatesTwo = findValue(matrix, pairs[i][1])
-    idx.push([coordinatesOne, coordinatesTwo])
+    let operation = checkType(coordinatesOne, coordinatesTwo)
+    idx.push({coordinatesOne, coordinatesTwo, operation})
   }
   return idx
 }
@@ -83,6 +84,16 @@ function findValue(arr, value) {
   }
 }
 
-function checkType() {
-  
+function checkType(list1, list2) {
+  if(list1[0] === list2[0]) return 'row'
+  if(list1[1] === list2[1]) return 'column'
+  return 'matrix'
+}
+
+function getSubMatrix(list1, list2, matrix) {
+  // let newlist1 = {coordinates:[list1[0], list2[1]], value: matrix[list1[0]][list2[1]]}
+  let a = matrix[list1[0]][list2[1]]
+  // let newlist2 = {coordinates:[list2[0], list1[1]], value: matrix[list2[0]][list1[1]]}
+  let b = matrix[list2[0]][list1[1]]
+  return {a, b}
 }
